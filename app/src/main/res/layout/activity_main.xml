@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.eatanapple.tourguide.MainActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
-</android.support.constraint.ConstraintLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/sliding_tabs"
+        style="@style/Widget.MaterialComponents.TabLayout.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="413dp"
+        android:layout_height="684dp"
+        app:layout_constraintTop_toBottomOf="@+id/sliding_tabs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
