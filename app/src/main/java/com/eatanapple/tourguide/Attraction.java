@@ -5,13 +5,13 @@ public class Attraction {
     String name;
     String hours;
     String location;
-    String type;
+    int pictureResourceId;
 
-    public Attraction(String name, String hours, String location, String type) {
+    public Attraction(String name, String hours, String location, int pictureResourceId) {
         this.name = name;
         this.hours = hours;
         this.location = location;
-        this.type = type;
+        this.pictureResourceId = pictureResourceId;
     }
 
     public String getName() {
@@ -38,21 +38,12 @@ public class Attraction {
         this.location = location;
     }
 
-    public String getType() {
-        return type;
+    public int getPictureResourceId() {
+        return pictureResourceId;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setPictureResourceId(int pictureResourceId) {
+        this.pictureResourceId = pictureResourceId;
     }
 
-    @Override
-    public String toString() {
-        return "Attractions{" +
-                "name='" + name + '\'' +
-                ", hours='" + hours + '\'' +
-                ", location='" + location + '\'' +
-                ", type='" + type + '\'' +
-                '}';
-    }
 }

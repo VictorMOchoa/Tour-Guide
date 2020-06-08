@@ -10,6 +10,7 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/sliding_tabs"
         style="@style/Widget.MaterialComponents.TabLayout.Colored"
+        app:tabTextAppearance="@style/tabStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"

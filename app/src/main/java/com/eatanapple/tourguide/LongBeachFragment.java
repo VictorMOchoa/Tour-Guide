@@ -22,28 +22,43 @@ public class LongBeachFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_long_beach, container, false);
 
+        List<Attraction> attractions = setupAttractionsList();
+
         RecyclerView recyclerView = view.findViewById(R.id.attractions_rv);
-        List<Attraction> attractions = new ArrayList<>();
-        Attraction aquarium = new Attraction("The Aquarium of The Pacific", "8:00AM - 8:00PM", "100 Aquarium Way, Long Beach, CA 90802", "park");
-        Attraction kingTaco = new Attraction("King Taco", "9:00AM - 10:00PM", "1841 Long Beach Blvd Long Beach, CA 90806", "food");
-        Attraction walterPyramid = new Attraction("Walter Pyramid", "10:00AM - 5:00PM", "1250 N Bellflower Blvd, Long Beach, CA 90840", "school");
-        Attraction queenMary = new Attraction("The Queen Mary", "8:00AM - 5:00PM", "1126 Queens Hwy, Long Beach, CA 90802", "school");
-        attractions.add(aquarium);
-        attractions.add(kingTaco);
-        attractions.add(walterPyramid);
-        attractions.add(queenMary);
 
-
-
-        AttractionAdapter adapter = new AttractionAdapter(getContext(), attractions);
+        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
 
-        // Inflate the layout for this fragment
         return view;
+    }
+
+    private List<Attraction> setupAttractionsList() {
+        List<Attraction> attractions = new ArrayList<>();
+        Attraction aquarium = new Attraction(getResources().getString(R.string.aop_name),
+                getResources().getString(R.string.aop_hours),
+                getResources().getString(R.string.aop_address),
+                R.drawable.aquarium_of_the_pacific);
+        Attraction kingTaco = new Attraction(getResources().getString(R.string.king_taco_name),
+                getResources().getString(R.string.king_taco_hours),
+                getResources().getString(R.string.king_taco_address),
+                R.drawable.kingtaco);
+        Attraction walterPyramid = new Attraction(getResources().getString(R.string.walter_pyramid_name),
+                getResources().getString(R.string.walter_pyramid_hours),
+                getResources().getString(R.string.walter_pyramid_address),
+                R.drawable.walterpyramid);
+        Attraction queenMary = new Attraction(getResources().getString(R.string.queen_mary_name),
+                getResources().getString(R.string.queen_mary_hours),
+                getResources().getString(R.string.queen_mary_address),
+                R.drawable.queenmary);
+        attractions.add(aquarium);
+        attractions.add(kingTaco);
+        attractions.add(walterPyramid);
+        attractions.add(queenMary);
+        return attractions;
     }
 
 }

@@ -3,4 +3,58 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Long Beach-->
+    <string name="aop_name">The Aquarium of The Pacific</string>
+    <string name="aop_address">100 Aquarium Way, Long Beach, CA 90802</string>
+    <string name="aop_hours">8:00AM - 8:00PM</string>
+    <string name="king_taco_name">King Taco</string>
+    <string name="king_taco_address">1841 Long Beach Blvd Long Beach, CA 90806</string>
+    <string name="king_taco_hours">9:00AM - 10:00PM</string>
+    <string name="walter_pyramid_name">Walter Pyramid</string>
+    <string name="walter_pyramid_address">1250 N Bellflower Blvd, Long Beach, CA 90840</string>
+    <string name="walter_pyramid_hours">10:00AM - 5:00PM</string>
+    <string name="queen_mary_name">The Queen Mary</string>
+    <string name="queen_mary_address">1126 Queens Hwy, Long Beach, CA 90802</string>
+    <string name="queen_mary_hours">8:00AM - 5:00PM</string>
+    <!-- Torrance-->
+    <string name="del_amo_name">Del Amo Mall</string>
+    <string name="del_amo_address">3525 W Carson St, Torrance, CA 90503</string>
+    <string name="del_amo_hours">11:00AM - 7:00PM</string>
+    <string name="wilson_park_name">Wilson Park</string>
+    <string name="wilson_park_address">2200 Crenshaw Blvd, Torrance, CA 90501</string>
+    <string name="wilson_park_hours">6:00AM - 10:00PM</string>
+    <string name="torrance_beach_name">Torrance Beach</string>
+    <string name="torrance_beach_address">Torrance, CA 90277</string>
+    <string name="torrance_beach_hours">6:00AM - 10:00PM</string>
+    <string name="in_n_out_name">In-N-Out</string>
+    <string name="in_n_out_address">20150 Hawthorne Blvd, Torrance, CA 90503</string>
+    <string name="in_n_out_hours">10:30AM - 1:00AM</string>
+    <!-- Wilmington -->
+    <string name="foster_freeze_name">Foster Freeze</string>
+    <string name="foster_freeze_address">603 Pacific Coast Hwy, Wilmington, CA 90744</string>
+    <string name="foster_freeze_hours">11:00AM - 9:00PM</string>
+    <string name="banning_home_name">Banning Museum</string>
+    <string name="banning_home_address">401 E M St, Wilmington, CA 90744</string>
+    <string name="banning_home_hours">12:30PM - 3:30PM</string>
+    <string name="leos_tacos_name">Leo\'s Tacos</string>
+    <string name="leos_tacos_address">1748 N Avalon Blvd, Wilmington, CA 90744</string>
+    <string name="leos_tacos_hours">5:00PM - 1:00AM</string>
+    <string name="harbor_college_name">Los Angeles Harbor College</string>
+    <string name="harbor_college_address">1111 Figueroa Pl, Wilmington, CA 90744</string>
+    <string name="harbor_college_hours">6:00AM - 10:00PM</string>
+
+    <string name="point_fermin_name">Point Fermin Park</string>
+    <string name="point_fermin_address">807 W Paseo Del Mar, San Pedro, CA 90731</string>
+    <string name="point_fermin_hours">5:00AM - 10:30PM</string>
+    <string name="busy_bee_name">Busy Bee Market</string>
+    <string name="busy_bee_address">2413 S Walker Ave, San Pedro, CA 90731</string>
+    <string name="busy_bee_hours">10:00AM - 5:00PM</string>
+    <string name="vincent_thomas_name">Vincent Thomas Bridge</string>
+    <string name="vincent_thomas_address">San Pedro, CA 90731</string>
+    <string name="vincent_thomas_hours">24/7</string>
+    <string name="korean_bell_name">Korean Friendship Bell</string>
+    <string name="korean_bell_address">3601 S Gaffey St, San Pedro, CA 90731</string>
+    <string name="korean_bell_hours">7:00AM - 7:00PM</string>
+
 </resources>

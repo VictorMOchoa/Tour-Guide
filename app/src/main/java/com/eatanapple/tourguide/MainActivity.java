@@ -11,7 +11,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 
 public class MainActivity extends AppCompatActivity {
-    String[] tabs = {"Long Beach", "Torrance", "Wilmington"};
+    String[] tabs = {"Long Beach", "Torrance", "Wilmington", "San Pedro"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

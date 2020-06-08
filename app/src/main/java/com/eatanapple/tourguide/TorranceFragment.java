@@ -19,28 +19,42 @@ public class TorranceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_torrance, container, false);
+        List<Attraction> attractions = setupAttractionsList();
 
         RecyclerView recyclerView = view.findViewById(R.id.attractions_rv);
-        List<Attraction> attractions = new ArrayList<>();
-        Attraction delAmoMall = new Attraction("Del Amo Mall", "8:00AM - 8:00PM", "100 Aquarium Way, Long Beach, CA 90802", "park");
-        Attraction torranceBeach = new Attraction("Torrance Beach", "9:00AM - 10:00PM", "1841 Long Beach Blvd Long Beach, CA 90806", "food");
-        Attraction wilsonPark = new Attraction("Wilson Park", "10:00AM - 5:00PM", "1250 N Bellflower Blvd, Long Beach, CA 90840", "school");
-        Attraction queenMary = new Attraction("The Queen Mary", "8:00AM - 5:00PM", "1126 Queens Hwy, Long Beach, CA 90802", "school");
-        attractions.add(delAmoMall);
-        attractions.add(torranceBeach);
-        attractions.add(wilsonPark);
-        attractions.add(queenMary);
 
-
-
-        AttractionAdapter adapter = new AttractionAdapter(getContext(), attractions);
+        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
 
-        // Inflate the layout for this fragment
         return view;
+    }
+
+    private List<Attraction> setupAttractionsList() {
+        List<Attraction> attractions = new ArrayList<>();
+        Attraction delAmo = new Attraction(getResources().getString(R.string.del_amo_name),
+                getResources().getString(R.string.del_amo_hours),
+                getResources().getString(R.string.del_amo_address),
+                R.drawable.del_amo);
+        Attraction wilsonPark = new Attraction(getResources().getString(R.string.wilson_park_name),
+                getResources().getString(R.string.wilson_park_hours),
+                getResources().getString(R.string.wilson_park_address),
+                R.drawable.wilson_park);
+        Attraction torranceBeach = new Attraction(getResources().getString(R.string.torrance_beach_name),
+                getResources().getString(R.string.torrance_beach_hours),
+                getResources().getString(R.string.torrance_beach_address),
+                R.drawable.torrance_beach);
+        Attraction inNOut = new Attraction(getResources().getString(R.string.in_n_out_name),
+                getResources().getString(R.string.in_n_out_hours),
+                getResources().getString(R.string.in_n_out_address),
+                R.drawable.innout);
+        attractions.add(delAmo);
+        attractions.add(wilsonPark);
+        attractions.add(torranceBeach);
+        attractions.add(inNOut);
+        return attractions;
     }
 }

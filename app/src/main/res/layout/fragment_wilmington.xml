@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.eatanapple.tourguide.TorranceFragment">
+    tools:context="com.eatanapple.tourguide.WilmingtonFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/attractions_rv"

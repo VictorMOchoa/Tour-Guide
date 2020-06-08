@@ -23,13 +23,15 @@ public class FragmentAdapter extends FragmentStateAdapter {
             case 1:
                 return new TorranceFragment();
             case 2:
-                return new LongBeachFragment();
+                return new WilmingtonFragment();
+            case 3:
+                return new SanPedroFragment();
         }
         return new LongBeachFragment();
     }
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 4;
     }
 }

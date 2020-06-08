@@ -1,10 +1,14 @@
 package com.eatanapple.tourguide;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -21,14 +25,16 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.At
     }
 
     public class AttractionViewHolder extends RecyclerView.ViewHolder  {
-
-        // Setup the resources for each city here..
         TextView attractionNameTextView;
         TextView addressTextView;
+        TextView hoursTextView;
+        ImageView locationImageView;
         public AttractionViewHolder(View view) {
             super(view);
             attractionNameTextView = view.findViewById(R.id.attraction_name_tv);
             addressTextView = view.findViewById(R.id.address_tv);
+            hoursTextView = view.findViewById(R.id.hours_tv);
+            locationImageView = view.findViewById(R.id.event_iv);
         }
     }
 
@@ -47,9 +53,11 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.At
 
     @Override
     public void onBindViewHolder(AttractionViewHolder holder, int position) {
-        // Set the views with holder.prop
         holder.attractionNameTextView.setText(attractions.get(position).getName());
         holder.addressTextView.setText(attractions.get(position).getLocation());
+        holder.hoursTextView.setText(attractions.get(position).getHours());
+        Drawable drawable = context.getResources().getDrawable(attractions.get(position).getPictureResourceId());
+        holder.locationImageView.setImageDrawable(drawable);
     }
 
 
