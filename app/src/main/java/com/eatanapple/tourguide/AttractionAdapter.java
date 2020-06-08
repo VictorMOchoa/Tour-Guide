@@ -4,10 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.List;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.AttractionViewHolder> {
@@ -23,10 +23,12 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.At
     public class AttractionViewHolder extends RecyclerView.ViewHolder  {
 
         // Setup the resources for each city here..
-
+        TextView attractionNameTextView;
+        TextView addressTextView;
         public AttractionViewHolder(View view) {
             super(view);
-
+            attractionNameTextView = view.findViewById(R.id.attraction_name_tv);
+            addressTextView = view.findViewById(R.id.address_tv);
         }
     }
 
@@ -46,6 +48,8 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.At
     @Override
     public void onBindViewHolder(AttractionViewHolder holder, int position) {
         // Set the views with holder.prop
+        holder.attractionNameTextView.setText(attractions.get(position).getName());
+        holder.addressTextView.setText(attractions.get(position).getLocation());
     }
 
 

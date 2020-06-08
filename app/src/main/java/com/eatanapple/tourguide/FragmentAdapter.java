@@ -18,11 +18,11 @@ public class FragmentAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         switch (position) {
+            case 0:
+                return new LongBeachFragment();
             case 1:
-                return new LongBeachFragment();
+                return new TorranceFragment();
             case 2:
-                return new LongBeachFragment();
-            case 3:
                 return new LongBeachFragment();
         }
         return new LongBeachFragment();

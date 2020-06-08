@@ -28,8 +28,5 @@ public class MainActivity extends AppCompatActivity {
                         tab.setText(tabs[position]);
                     }
                 }).attach();
-
-//        tabLayout.setupW
-
     }
 }
